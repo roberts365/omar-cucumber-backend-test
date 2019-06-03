@@ -3,9 +3,15 @@
  */
 package omar.cucumber.backend.test
 
-class Application {
+import omar.cucumber.backend.test.FeatureFiles
+import omar.cucumber.backend.test.CucumberTest
+import omar.cucumber.backend.test.TomcatStart
 
+class Application {
     static void main(String[] args) {
+
+        FeatureFiles featureFiles = new FeatureFiles()
+        featureFiles.create()
 
         if (System.getenv("runEnv") == "local")
         {
